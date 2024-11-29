@@ -6,13 +6,29 @@
 
 \section{本研究の目的}
 \label{sec:intro_my_purpose}
-本研究の目的を以下の通りに設定する．
+
+\refsec{sec:intro_background}では，石油精製プラントの点検の現状について述べ，石油プラントにおける音響点検に特有の異常音の収集が困難である点，異常の位置特定が必要である点を示した．
+\refsec{sec:intro_previous-research}では，図　に示すように，異常のデータを用いた教師あり学習とグリッド分割による異常音検知を，異常の位置特定と，正常音のみによる訓練の観点から比較した．
+
+\begin{table}[htbp]
+  \centering
+  \caption{教師あり学習とグリッド分割による異常音検知の比較}
+  \label{tab:comparison}
+  \begin{tabular}{|c|c|c|}
+  \hline
+   & 異常の位置特定 & 正常音のみによる訓練 \\ \hline
+  教師あり学習 & 可能 & 不可能 \\ \hline
+  グリッド分割による異常音検知 & 不可能 & 可能 \\ \hline
+  \end{tabular}
+\end{table}
 
 % textlint-disable ja-technical-writing/ja-no-mixed-period
+
+以上を踏まえて本研究の目的を以下のように設定する．
 \bigskip
 \begin{itembox}[c]{目的}
   \centering
-  目的をここに書く
+  異常音の教師データが不要な異常の位置特定
 \end{itembox}
 % textlint-enable ja-technical-writing/ja-no-mixed-period
 
