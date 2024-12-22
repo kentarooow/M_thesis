@@ -31,7 +31,7 @@
 
 \begin{figure}[t]
   \centering
-  \includegraphics[keepaspectratio, width=1.0\linewidth]{chap1/oil_consumption.pdf}
+  \includegraphics[keepaspectratio, width=1.0\linewidth]{chap1/oil_consumption.png}
   \caption{世界石油消費量の推移}
   \label{fig:oil_consumption}
 \end{figure}
@@ -73,14 +73,14 @@
   \end{tabular}
 \end{table}
 
-\subsection{プラント内音響点検の特徴}
+\subsection{ポンプを対象とした点検}
 \label{sec:intro_plant_characteristics}
 
 石油精製プラント内では，多様な装置が複雑に組み合わさり，その稼働状況によって各種の異常が発生し得る．
 \reftab{tab:plant_anomalies}に示すように，プラント内ではポンプや配管，その他設備に関連した多種多様な異常が確認され，
 それぞれの異常毎に適した人間の感覚による点検が行われている．
 
-その中でも，ポンプはプラント内での液体やスラリー（液体と固体の混合物）の移動に用いられる装置であり，プラント内にて最も多く設置されている機器の一つである．
+その中でも，\reffig{fig:pump}ポンプはプラント内での液体やスラリー（液体と固体の混合物）の移動に用いられる装置であり，プラント内にて最も多く設置されている機器の一つである．
 ポンプは内部に回転機構を有しており，その中核には流体を昇圧・輸送するための回転軸が配置されている．
 回転軸の安定した回転を支えるため，ポンプ内部にはベアリングと呼ばれる部品が組み込まれている．
 ベアリングは回転軸に掛かるラジアル(軸方向)およびスラスト(軸垂直方向)方向の加重を受け止め，摩擦を低減する役割を担う．
@@ -95,7 +95,14 @@
 
 その中でも，本研究では聴覚による点検に着目する．
 聴覚による異常検知は点検において重要な意義がある．
-というのも，音響信号は空気を媒体として伝搬するため，視覚や触覚と異なり，遠方の異常音を検知することが可能である．
+というのも，音響信号は空気を媒体として伝搬するため，視覚や触覚と異なり，筐体内部の情報を遠方にて取得することができる．
 したがって，本研究では聴覚による点検を実施するために，マイクロフォンを用いた音響点検に焦点を当てる．
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=1.0\linewidth]{chap1/pump.pdf}
+  \caption{石油精製プラント}
+  \label{fig:pump}
+\end{figure}
 
 \end{document}
