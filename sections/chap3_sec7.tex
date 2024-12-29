@@ -18,7 +18,7 @@
 最後に、観測されたメルスペクトログラムと予測されたメルスペクトログラムの比較が $L_1$ ノルムを使用して行われ、エネルギー差が算出される。これは式 (1) のように表され、異常検知の閾値を $T_h$ とする。
 
 \begin{equation}
-    E_i = L_1(m_i^o, m_i^p) < T_h \quad (1)
+    E_i = L_1(m_i^o, m_i^p) < T_h \quad
 \end{equation}
 
 \subsection{異常音の位置特定}
@@ -31,24 +31,24 @@ S = \{ (\mathbf{x}_i^*, E_i^*) \}
 
 
 
-式 (1) の左辺は観測された音と予測された音のエネルギー差に対応する。
+式  の左辺は観測された音と予測された音のエネルギー差に対応する。
 
 音波が運ぶエネルギーは距離の平方根に反比例して減衰することが知られている。すなわち、距離の二乗に反比例する。これは式 (2) で表される。ここで、$E$ は波が運ぶエネルギー、$r$ は観測点と音源との距離である。
 
 \begin{equation}
-    E \propto \frac{\alpha}{r^2} \tag{2}
+    E \propto \frac{\alpha}{r^2}
 \end{equation}
 
 異常音源の位置 $\mathbf{x}_a$ を定数とし、座標系における適切な距離関数を $d(., .)$ とすると、式 (2) は集合 $S$ のサンプルに対して式 (3) に書き換えられる。
 
 \begin{equation}
-    d(\mathbf{x}_a, \mathbf{x}_i^*) = \frac{\alpha}{\sqrt{E_i^*}} \tag{3}
+    d(\mathbf{x}_a, \mathbf{x}_i^*) = \frac{\alpha}{\sqrt{E_i^*}}
 \end{equation}
 
 これが集合 $S$ 内のすべてのサンプルに対して成り立つため、式 (4) を導ける。
 
 \begin{equation}
-    \sum_{S} \left| d(\mathbf{x}_a, \mathbf{x}_i^*) - \frac{\alpha}{\sqrt{E_i^*}} \right| = 0 \tag{4}
+    \sum_{S} \left| d(\mathbf{x}_a, \mathbf{x}_i^*) - \frac{\alpha}{\sqrt{E_i^*}} \right| = 0
 \end{equation}
 
 ここで、環境内に単一の異常音源のみが存在し、$\alpha$ が環境に依存する定数であると仮定すると、異常音源の位置を求めることが可能になる。
