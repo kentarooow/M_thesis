@@ -21,10 +21,23 @@
 それらの位置を切り替えながら追加の走行を行った．
 こうすることで，異なる位置で発生する異常音を検知できるかを評価すると同時に，
 機器の連続作動音（インパクトドライバー）と間欠動作音（金属棒打撃）という異なる特性を持つ異常音を検知できるかを評価した．
+
+\begin{table}[htbp]
+  \centering
+  \caption{各パスにおける各地点の異常音源}
+  \label{tab:abnormal_sound_jp}
+  \begin{tabular}{c|c|c}
+  \hline
+   & \textbf{地点A} & \textbf{地点B} \\ \hline
+  \textbf{1回目} & 金属棒を打撃 & インパクトドライバー \\
+  \textbf{2回目} & インパクトドライバー & 金属棒を打撃 \\ \hline
+  \end{tabular}
+\end{table}
+
 \subsection{データの処理}
 \label{subsec:vexp_ci_processing}
 得られた音声信号は，実験室での評価時と同様に，まず48kHzのサンプリングレートで録音された後，前処理としてノイズ除去フィルタや正規化などの基本的な信号処理を施した．
-続いて，短時間フーリエ変換を用いてパワースペクトルを抽出したのち，Melフィルタバンクを用いてスペクトログラムに変換し，
+続いて，短時間フーリエ変換を用いてパワースペクトルを抽出したのち，メルフィルタバンクを用いてスペクトログラムに変換し，
 特徴量を抽出した．
 なお，正常走行から得られたサンプルの一部をモデルの学習に用い，残りの正常サンプルと異常サンプルをテスト用として用いた．
 
@@ -35,5 +48,41 @@
 異常と判断される割合が顕著に増加した．
 特に，インパクトドライバーのような連続した衝撃音は，その周囲一体で一貫して異常判定を引き起こす傾向が見られたのに対し，
 金属棒をたたく音は打撃が行われる時間帯のみ断続的に異常として認識された．
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=1.0\linewidth]{chap4/field_environment.png}
+  \caption{屋外実験における実験環境}
+  \label{fig:field_environment}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=0.7\linewidth]{chap4/field_normal.png}
+  \caption{正常状態における異常検知結果}
+  \label{fig:field_normal}
+\end{figure}
+
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=0.7\linewidth]{chap4/field_abnormal1.png}
+  \caption{異常状態における異常検知結果}
+  \label{fig:field_abnormal1}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=0.7\linewidth]{chap4/field_abnormal.png}
+  \caption{異常状態における異常検知結果}
+  \label{fig:field_abnormal}
+\end{figure}
+
+
 \subsection{考察}
+
+屋外実験においても，提案手法が異常音の検知に有効であることが示された．
+
+
 \end{document}
