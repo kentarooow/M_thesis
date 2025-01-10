@@ -10,7 +10,7 @@
 以下では，実験環境の概要，実験手法，データの処理方法，得られた結果，そしてそれらに基づく考察について順に述べる．
 \subsection{実験環境}
 \label{subsec:vexp_ci_environment}
-実験は，\reffig{fig:field_environment}に示す石油精製プラントの稼働エリアの一角で実施した．
+実験は，\reffig{fig:field_environment}に示す石油精製プラントの一角で実施した．
 このエリアには，連続的に作動するポンプ類や定期的に圧力を放出するバルブ類など，複数の騒音源が点在している．
 定期的に圧力を放出するバルブ類が点在している．作業日当日もプラント全体が通常稼働中であり，背景騒音は実験室よりも格段に大きい環境であった．
 
@@ -23,6 +23,16 @@
 
 \subsection{実験方法}
 \label{subsec:vexp_ci_method}
+実験は，\reffig{fig:field_experimental_setup}に示すように，ポンプのような音源が存在する区間に経路を設定し，
+\begin{figure}[t]
+  \centering
+  \includegraphics[keepaspectratio, width=0.7\linewidth]{chap4/field_experimental_setup.png}
+  \caption{屋外実験の様子}
+  \label{fig:field_experimental_setup}
+\end{figure}
+
+
+
 プラント内を走行する移動ロボットに音声収録用のマイクと信号処理装置を搭載し，走行経路上の音データを取得した．
 まず，異常音源を配置しない状態で複数回走行し，プラントが正常稼働中の音を「正常サンプル」として収集した．
 次に，異常音を模擬するため，インパクトドライバと金属棒の打撃装置をプラント内の2箇所に設置し，位置を切り替えながら追加の走行を行った．
@@ -36,14 +46,14 @@
 異常音としては，インパクトドライバによる連続的な衝撃音と，金属棒を打ち鳴らす周期的な打撃音を用いた．
 これら2種類の音源を\reffig{fig:field_environment}に示す地点Aと地点Bに配置し，それぞれの配置を切り替えながら走行実験を実施した．
 こうすることで，連続的な衝撃音（インパクトドライバ）と間欠的な打撃音（金属棒）という異なる種類の異常を再現した．
-また，打撃音は１分間に２４０回のペースで２本の金属棒を打ち付けあうことで，異常音を再現した．
-正常時の走行を3回，異常音源が存在する状態の走行を2回実施した．\reftab{tab:abnormal_sound_jp}に各パスにおける異常音源を示す．
+また，打撃音は1分間に240回のペースで2本の金属棒を打ち付けあうことで，異常音を再現した．
+正常時の走行を3回，異常音源が存在する状態の走行を2回実施した．\reftab{tab:abnormal_sound_jp}にそれぞれの走行における異常音源を示す．
 このとき，プラントが通常稼働状態であるため，背景騒音にはポンプやバルブなど多種多様な音が混在している．
 
 
 \begin{table}[htbp]
   \centering
-  \caption{各パスにおける各地点の異常音源}
+  \caption{各走行の異常音源の配置}
   \label{tab:abnormal_sound_jp}
   \begin{tabular}{c|c|c}
   \hline
@@ -73,7 +83,6 @@
   \caption{正常状態における異常検知結果}
   \label{fig:field_normal}
 \end{figure}
-
 
 
 \begin{figure}[t]
